@@ -6,13 +6,13 @@ import argparse, sys
 def pass_fn(x):
     return x
 
-# Create a prompt with Title Case, for use with interactive_template
+# Create a prompt for use with interactive_template
 def title_msg(prompt):
     return str(prompt).title() + ': '
 
 # Fill in a template from user input in stdin
-def interactive_template(template: str, msg_func=pass_fn,
-                         val_func=pass_fn, delimiters='[]') -> str:
+def interactive_template(template: str, msg_func=pass_fn, val_func=pass_fn,
+        delimiters='[]'):
     result, skip = '', False
     replace_me = ''
     for i, char in enumerate(template):
@@ -38,7 +38,7 @@ def interactive_template(template: str, msg_func=pass_fn,
     return result
     
 # Fill occurrences of text between the delimiters in a template with values
-def fill_template(template: str, values: list, delimiters='[]') -> str:
+def fill_template(template: str, values: list, delimiters='[]'):
     result, skip = '', False
     vals = iter(values)
     for i, char in enumerate(template):
