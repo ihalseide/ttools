@@ -69,6 +69,25 @@ optional arguments:
   -p, --pretty  specify to pretty-print the stats
 ```
 
+## Template
+
+Tool for filling in a template string with values.
+
+usage: `template.py [-h] [-d DELIMITERS] (-v VALUES [VALUES ...] | -i) file`
+
+```
+positional arguments:
+  file                  Template file to fill in
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DELIMITERS         A string of 2 characters that represent the start of a template entry and the end of
+                        one. Default is "[]"
+  -v VALUES [VALUES ...]
+                        Take any amount of string values to replace into the template with
+  -i                    Use input (from stdin) to get the values interactively.
+```
+
 ## Contributing
 
 Feel free to ask, comment, and critique. Also feel free to submit a pull
