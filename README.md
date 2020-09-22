@@ -1,10 +1,11 @@
-# Squash
+# Ttools
 
-This is a mini script for squashing a text file by removing whitespace.
+Ttools is a collection of tools for text processing. Feel free to do whatever
+you want with all of them!
 
 ## Installation
 
-Clone the repository using git.
+Clone the repository using git, or download an archive file.
 
 # Dependencies
 
@@ -12,16 +13,32 @@ Requires Python 3.
 
 ## Usage
 
-Command arguments: `python squash.py [-h] file`
+General usage is like this: `python3 <script name> <arguments>`
 
-The script takes an input file to squash and will print out the result, so be sure to pipe the output to a new file if you wish. For more help, run:
+## Squash
 
-`python squash.py -h`
+squash.py removes whitespace from files
+
+## Textstat
+
+textstat.py gives text statistics
+
+Note that 'shortest\_line' and 'longest\_line' give line numbers, not actual
+lengths!
+
+## Charstat
+
+charstat.py gives character frequency statistics
+
+## Trailstat
+
+trailstat.py gives information about trailing spaces in a file
 
 ## Contributing
 
-Feel free to ask, comment, and critique. Also feel free to submit a pull request if you think you have something useful to contribute!
+Feel free to ask, comment, and critique. Also feel free to submit a pull
+request if you think you have something useful to contribute!
 
 ## License
 
-This project is licensed under the MIT License. See the "MIT License.txt" file in the top level for more information
+Please see the 'LICENSE.txt' file for license information.

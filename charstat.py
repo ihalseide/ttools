@@ -1,11 +1,10 @@
-#!python3
+#!/usr/bin/env python3
 
 import sys
 import argparse
 
 description = "Get statistics for characters of a text file."
 epilog = "Note: Occurence data in pretty printing is in the format 'row:col , index'"
-
 
 def escape(char: str):
     mapping = {
@@ -14,26 +13,20 @@ def escape(char: str):
             }
     return "'" + mapping.get(char, char) + "'"
 
-
 def location_str(line, column, index):
     return "{: >4}:{: <4}, {: >4}".format(line, column, index)
 
-
 def print_stats(char_first, char_count, char_last):
+    # Header
+    print('count', 'first_line', 'first_column', 'first_index', 'last_line',
+            'last_column', 'last_index')
     for char in char_first:
         count = char_count[char]
         first_line, first_column, first_index = char_first[char]
         last_line, last_column, last_index = char_last[char]
         pchar = escape(char)
-        print(pchar, 
-              'count:', count,
-              'first_line:', first_line,
-              'first_column:', first_column,
-              'first_index:', first_index,
-              'last_line:', last_line,
-              'last_column:', last_column,
-              'last_index:', last_index)
-
+        print(pchar, count, first_line, first_column, first_index, last_line,
+                last_column, last_index)
 
 def pretty_print_stats(char_first, char_count, char_last, filename=None):
     if filename:
@@ -50,7 +43,6 @@ def pretty_print_stats(char_first, char_count, char_last, filename=None):
         pchar = escape(char)
         print(" {: <8} | {: >6} | {} | {}" .format(pchar, count, first, last))
     print()
-
 
 def read_stats(filename):
     char_count = dict()
@@ -75,7 +67,6 @@ def read_stats(filename):
                 index += 1
     return char_first, char_count, char_last
 
-
 def main():
     parser = argparse.ArgumentParser(description=description, epilog=epilog)
     parser.add_argument("file", help="input file for analysis")
@@ -93,7 +84,6 @@ def main():
             print_stats(*stats)
     except Exception as e:
         print(e)
-
 
 if __name__ == '__main__':
     main()

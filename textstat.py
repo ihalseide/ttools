@@ -1,4 +1,4 @@
-#!python3
+#!/usr/bin/env python3
 
 import sys
 import argparse
@@ -6,7 +6,7 @@ import argparse
 
 def print_stats(stats: dict):
     for key, value in stats.items():
-        print(key, ': ', value, sep='')
+        print(key, value)
 
 
 def convert_name(s: str):
@@ -22,6 +22,10 @@ def pretty_print_stats(stats: dict, filename=None):
     print(header)
     print('-' * len(header))
     for key, value in stats.items():
+        if value == True:
+            value = 'yes'
+        elif value == False:
+            value = 'no'
         print(convert_name(key), ': ', value, sep='')
     print()
 

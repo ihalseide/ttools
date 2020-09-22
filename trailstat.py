@@ -1,4 +1,4 @@
-#!python3
+#!/usr/bin/env python3
 
 import sys
 import argparse
@@ -34,6 +34,10 @@ def pretty_print_stats(stats: dict, filename=None):
     print(header)
     print('-' * len(header))
     for key, value in stats.items():
+        if value == 0:
+            value = '0'
+        elif not value:
+            value = None
         print(convert_name(key), ': ', value, sep='')
     print()
 
