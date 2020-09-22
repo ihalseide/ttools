@@ -2,28 +2,9 @@
 
 import argparse, sys
 
-# Return the matching character for a character that can be paired
-def get_match(s: str):
-    if type(s) != str or len(s) > 1:
-        return None
-    sets = ('[]', '()', '<>', '{}')
-    for pair in sets:
-        i = pair.find(s)
-        if -1 != i:
-            return pair[i - 1]
-    return s
-
-# Create a function that CONSTANTLY returns the original value
-def constantly(x):
-    return lambda: x
-
 # A function that does nothing but return its argument
 def pass_fn(x):
     return x
-
-# Create empty/no prompt, for use with interactive_template
-def no_msg(_):
-    return ''
 
 # Create a prompt with Title Case, for use with interactive_template
 def title_msg(prompt):
@@ -79,7 +60,7 @@ def main():
     parser = argparse.ArgumentParser(description=
             'Tool for filling in a template string with values.')
     
-    parser.add_argument('file', type=open)
+    parser.add_argument('file', type=open, help='Template file to fill in')
     parser.add_argument('-d', dest='delimiters', default='[]', help='A string of 2 characters that represent the start of a template entry and the end of one. Default is "[]"')
 
     # Require either values or interactive mode
