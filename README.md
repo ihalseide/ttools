@@ -21,18 +21,53 @@ squash.py removes whitespace from files
 
 ## Textstat
 
-textstat.py gives text statistics
+Get general text statistics for a file.
+
+usage: `textstat.py [-h] [-p] file`
+
+```
+positional arguments:
+  file          input file for analysis
+
+optional arguments:
+  -h, --help    show this help message and exit
+  -p, --pretty  specify to pretty-print the stats
+```
 
 Note that 'shortest\_line' and 'longest\_line' give line numbers, not actual
 lengths!
 
 ## Charstat
 
-charstat.py gives character frequency statistics
+Get statistics for characters of a text file.
+
+usage: `charstat.py [-h] [-p] file`
+
+```
+positional arguments:
+  file          input file for analysis
+
+optional arguments:
+  -h, --help    show this help message and exit
+  -p, --pretty  specify to pretty-print the stats
+
+Note: Occurence data in pretty printing is in the format 'row:col , index'
+```
 
 ## Trailstat
 
-trailstat.py gives information about trailing spaces in a file
+Get lines that have trailing whitespace.
+
+usage: `trailstat.py [-h] [-p] file`
+
+```
+positional arguments:
+  file          input file for analysis
+
+optional arguments:
+  -h, --help    show this help message and exit
+  -p, --pretty  specify to pretty-print the stats
+```
 
 ## Contributing
 
