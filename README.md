@@ -7,7 +7,7 @@ you want with all of them!
 
 Clone the repository using git, or download an archive file.
 
-# Dependencies
+## Dependencies
 
 Requires Python 3.
 
