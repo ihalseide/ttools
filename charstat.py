@@ -67,7 +67,10 @@ def read_stats(filename):
                 index += 1
     return char_first, char_count, char_last
 
-def main():
+def interactive ():
+    pass
+
+def main ():
     parser = argparse.ArgumentParser(description=description, epilog=epilog)
     parser.add_argument("file", help="input file for analysis")
     parser.add_argument("-p", "--pretty",

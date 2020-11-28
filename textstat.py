@@ -70,6 +70,10 @@ def read_stats(filename):
             'empty_line_count': num_blank_lines,
             'ends_with_newline': ends_with_newline }
 
+def interactive ():
+    f = input("File for analysis: ")
+    stats = read_stats(f)
+    pretty_print_stats(stats, filename=f)
 
 def main():
     parser = argparse.ArgumentParser(description="Get general text statistics for a file.")

@@ -24,7 +24,10 @@ def squash (filename, output, lines, tabs, spaces, escsingle, escdouble):
             if (char not in remove) or (quote1 or quote2):
                 print(char, end='', file=output)
 
-def main():
+def interactive ():
+    pass
+
+def main ():
     p = ArgumentParser(description="Remove whitespace")
     p.add_argument('input',
             help='The file to remove linebreaks from')

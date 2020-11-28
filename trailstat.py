@@ -61,8 +61,10 @@ def read_stats(filename):
     return {'total_trailing_whitespace': total_space,
             'trailing_lines': trailing_lines}
 
+def interactive ():
+    pass
 
-def main():
+def main ():
     parser = argparse.ArgumentParser(description="Get lines that have trailing whitespace.")
     parser.add_argument("file", help="input file for analysis")
     parser.add_argument("-p", "--pretty",
