@@ -51,6 +51,30 @@ optional arguments:
 
 Note: Occurence data in pretty printing is in the format 'row:col , index'
 
+
+### T-Tools: paginate
+
+```
+usage: paginate.py [-h] [-l LINES] [-c CHARS] [-n NUMBER] [-s SEPARATOR] file
+
+Split an input file into pages based on line and character counts per page. A separator
+value can be used to print in between each page. Emits all output to stdout.
+
+positional arguments:
+  file                  input file to paginate
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -l LINES, --lines LINES
+                        page line limit
+  -c CHARS, --chars CHARS
+                        page character limit
+  -n NUMBER, --number NUMBER
+                        maximum number of pages to generate
+  -s SEPARATOR, --separator SEPARATOR
+                        separator string between pages
+```
+
 ### T-Tools: squash
 
 ```
