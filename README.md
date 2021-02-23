@@ -38,7 +38,6 @@ The rest of this file contains the descriptions of each text tool.
 
 ```
 usage: charstat.py [-h] [-p] file
-```
 
 Get statistics for characters of a text file.
 
@@ -50,7 +49,7 @@ optional arguments:
   -p, --pretty  specify to pretty-print the stats
 
 Note: Occurence data in pretty printing is in the format 'row:col , index'
-
+```
 
 ### T-Tools: paginate
 
