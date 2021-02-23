@@ -49,6 +49,8 @@ def main ():
             delimiters = input("Enter the pair of delimiters to use for the template (e.g [], (), {}, or <>)\n")
             print('Begin filling the template "%s":' % template)
             result = interactive_template(t_file.read(), delimiters)
+
+            print('\nThe filled in template begins on the next line:')
             print(result)
     except IOError as e:
         print('Error opening file "%s".' % template, e)
